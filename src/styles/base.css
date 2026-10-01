@@ -1,0 +1,72 @@
+body::-webkit-scrollbar {
+  @apply w-0;
+}
+
+html,
+body {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply m-0 bg-white p-0 font-body text-body-1 leading-body-1 font-normal antialiased;
+}
+
+p {
+  @apply m-0 p-0 font-body text-body-1 leading-body-1 font-normal;
+}
+
+small {
+  @apply font-body text-body-4 leading-body-4 font-normal;
+}
+
+.heading--cherry {
+  @apply text-cherry;
+}
+
+.heading--soft-ivory {
+  @apply text-soft-ivory;
+}
+
+.heading--grey {
+  @apply text-grey;
+}
+
+.heading--white {
+  @apply text-white;
+}
+
+.heading--black {
+  @apply text-black;
+}
+
+.heading--uppercase {
+  @apply uppercase;
+}
+
+.prose p + p,
+.prose p + ul,
+.prose p + ol,
+.prose ul + p,
+.prose ol + p {
+  @apply mt-15;
+}
+
+.prose ul {
+  @apply list-disc pl-20;
+}
+
+.prose ol {
+  @apply list-decimal pl-20;
+}
+
+.prose li + li {
+  @apply mt-6;
+}
+
+.prose a {
+  @apply underline underline-offset-2 transition-colors duration-300 hover:text-cherry;
+}
+
+.prose strong {
+  @apply font-semibold;
+}

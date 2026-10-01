@@ -1,0 +1,10 @@
+@utility text-* {
+  font-size: calc(--value(integer) * 1px);
+}
+@utility rounded-* {
+  border-radius: calc(--value(integer) * 1px);
+}
+@utility border-* {
+  border-width: --value(--border-width-*);
+  border-width: calc(--value(integer) * 1px);
+}

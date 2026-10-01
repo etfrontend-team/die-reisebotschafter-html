@@ -1,0 +1,63 @@
+/* button — base */
+.btn {
+  @apply inline-flex max-w-full shrink-0 cursor-pointer items-center justify-center gap-gap-04 rounded-lg border-sm border-solid font-body text-button font-normal transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cherry disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:cursor-not-allowed aria-disabled:opacity-50 md:gap-gap-05 md:font-medium;
+}
+
+/* button — label wraps only when wider than its container */
+.btn-label {
+  @apply min-w-0 break-words;
+}
+
+/* button — arrow (label + icon circle) */
+.btn-arrow {
+  @apply py-7 pr-7 pl-15 md:py-6 md:pr-6 md:pl-20;
+}
+
+.btn-icon-wrap {
+  @apply inline-flex size-30 shrink-0 items-center justify-center rounded-full transition-colors duration-300 md:size-38;
+}
+
+.btn-icon {
+  @apply size-16 transition-transform duration-300 md:size-20;
+}
+
+.btn-arrow:hover .btn-icon,
+.btn-arrow:active .btn-icon,
+.btn-arrow:focus-visible .btn-icon {
+  @apply -rotate-45;
+}
+
+/* button — simple (text only, bg changes on hover) */
+.btn-simple {
+  @apply px-20 py-14;
+}
+
+/* button — small */
+.btn-simple.btn-small {
+  @apply px-20 py-12 text-body-4;
+}
+
+/* button — colors */
+.btn-white {
+  @apply border-white bg-white text-cherry;
+}
+
+.btn-white .btn-icon-wrap {
+  @apply bg-cherry text-white;
+}
+
+.btn-cherry {
+  @apply border-cherry bg-cherry text-white;
+}
+
+.btn-cherry .btn-icon-wrap {
+  @apply bg-white text-cherry;
+}
+
+.btn-simple.btn-white {
+  @apply hover:border-cherry hover:bg-cherry hover:text-white active:border-cherry active:bg-cherry active:text-white;
+}
+
+.btn-simple.btn-cherry {
+  @apply hover:border-white hover:bg-white hover:text-cherry active:border-white active:bg-white active:text-cherry;
+}
