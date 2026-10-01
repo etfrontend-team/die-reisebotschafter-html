@@ -74,3 +74,7 @@ small {
 .prose strong {
   @apply font-semibold;
 }
+
+.general-spacing {
+  @apply py-gap-08 lg:py-gap-09;
+}

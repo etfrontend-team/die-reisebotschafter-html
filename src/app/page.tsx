@@ -1,10 +1,14 @@
+import HeroBanner from "@/sections/HeroBanner";
+import OurStory from "@/sections/OurStory";
+import PartnersLogos from "@/sections/PartnersLogos";
+
 export default function Home() {
   return (
     <main>
-      <div className="h-screen bg-cherry/30"></div>
-      <div className="h-screen bg-cherry/20"></div>
-      <div className="h-screen bg-cherry/30"></div>
-      <div className="h-screen bg-cherry/20"></div>
+      <HeroBanner />
+      <OurStory />
+      <PartnersLogos />
+      <div className="h-screen"></div>
     </main>
   );
 }

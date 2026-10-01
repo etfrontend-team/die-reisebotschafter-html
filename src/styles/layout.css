@@ -11,7 +11,7 @@
 }
 
 .header-inner {
-  @apply grid grid-cols-header items-center gap-gap-06 py-10 xl:py-15;
+  @apply grid grid-cols-[1fr_auto_1fr] items-center gap-gap-06 py-10 xl:py-gap-05;
 }
 
 .header-logo-img {
@@ -185,7 +185,7 @@
 }
 
 .mega-menu-link {
-  @apply block border-b border-transparent pb-gap-04 font-body text-body-2 font-normal text-grey opacity-50 transition duration-300 hover:border-black hover:opacity-100 focus-visible:border-black focus-visible:opacity-100;
+  @apply block border-b border-transparent pb-gap-04 font-body text-body-2 font-normal wrap-break-word text-grey opacity-50 transition duration-300 hover:border-black hover:opacity-100 focus-visible:border-black focus-visible:opacity-100;
 }
 
 .mega-menu-link--active {
@@ -197,7 +197,7 @@
 }
 
 .mobile-menu {
-  @apply pointer-events-none fixed inset-x-20 top-65 bottom-26 mt-10 flex -translate-y-10 flex-col rounded-sm bg-white opacity-0 transition duration-300 479:inset-x-26 xl:hidden;
+  @apply pointer-events-none fixed inset-x-26 top-65 bottom-26 mt-10 flex -translate-y-10 flex-col rounded-sm bg-white opacity-0 transition duration-300 xl:hidden;
 }
 
 .mobile-menu--open {
@@ -278,7 +278,7 @@
 }
 
 .mobile-menu-children {
-  @apply columns-2 gap-56;
+  @apply columns-2 gap-20 max-425:columns-1 479:gap-56;
 }
 
 .mobile-menu-children > li {
@@ -303,4 +303,97 @@
 
 .mobile-menu .mobile-menu-cta {
   @apply w-full justify-between rounded-md pl-20;
+}
+
+.footer {
+  @apply p-gap-06 max-md:p-16;
+}
+
+.footer-card {
+  @apply flex flex-col gap-gap-09 rounded-sm bg-black px-20 pt-gap-11 pb-gap-07 max-md:gap-gap-08 max-md:px-gap-05 max-md:pt-60 max-md:pb-20;
+}
+
+.footer-top {
+  @apply flex gap-gap-10 max-xl:flex-col max-xl:gap-gap-08;
+}
+
+.footer-brand {
+  @apply flex shrink-0 basis-306 flex-col gap-gap-07 max-xl:basis-auto;
+}
+
+.footer-logo-wrap {
+  @apply relative inline-flex shrink-0 self-start transition-opacity duration-300 hover:opacity-80;
+}
+
+.footer-logo {
+  @apply size-96;
+}
+
+.footer-intro {
+  @apply max-w-315 font-body text-body-2 leading-body-2 font-normal text-white;
+}
+
+.footer-links {
+  @apply grid flex-1 grid-cols-1 justify-between gap-40 1440:gap-x-60 md:grid-cols-2 lg:flex;
+}
+
+.footer-column,
+.footer-newsletter {
+  @apply flex flex-col gap-gap-06;
+}
+
+.footer-newsletter {
+  @apply basis-343 max-1440:basis-300 max-md:basis-auto;
+}
+
+.footer .footer-title {
+  @apply flex items-center gap-gap-04 text-20 leading-24 whitespace-nowrap before:block before:h-24 before:w-4 before:shrink-0 before:bg-cherry max-md:text-18 max-md:capitalize;
+}
+
+.footer-list {
+  @apply flex flex-col gap-12;
+}
+
+.footer-link {
+  @apply relative font-body text-body-4 leading-body-4 font-normal text-silver transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-300 hover:text-white hover:after:scale-x-100 focus-visible:after:scale-x-100;
+}
+
+.newsletter-form {
+  @apply flex flex-col items-start gap-gap-06;
+}
+
+.newsletter-fields {
+  @apply flex w-full flex-col gap-gap-04;
+}
+
+.newsletter-row {
+  @apply flex w-full gap-gap-04;
+}
+
+.newsletter-row > .newsletter-field {
+  @apply min-w-0 flex-1;
+}
+
+.newsletter-input {
+  @apply w-full border-b border-white/20 bg-transparent py-gap-05 font-body text-body-2 leading-body-2 font-normal text-white transition-colors duration-300 outline-none placeholder:text-white focus:border-white max-md:text-body-4 max-md:leading-body-4;
+}
+
+.footer-bottom {
+  @apply flex flex-col gap-gap-06 border-t-[0.5px] border-divider pt-gap-06 max-md:gap-32 max-md:pt-32;
+}
+
+.footer-bottom {
+  @apply md:flex-row md:flex-wrap md:items-center md:justify-between;
+}
+
+.footer-copyright {
+  @apply font-body text-body-2 leading-body-2 font-normal text-silver;
+}
+
+.footer-legal {
+  @apply flex items-center gap-12;
+}
+
+.footer-legal-link {
+  @apply relative font-body text-body-2 leading-body-2 font-normal text-silver transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-300 hover:text-white hover:after:scale-x-100 focus-visible:after:scale-x-100;
 }
