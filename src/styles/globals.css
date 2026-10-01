@@ -6,7 +6,6 @@
 @import "./utilities.css";
 
 :root {
-  /* adaptives / font-size (desktop) */
   --text-heading-1: 54px;
   --text-heading-2: 40px;
   --text-heading-3: 30px;
@@ -19,7 +18,6 @@
   --text-body-4: 14px;
   --text-button: 16px;
 
-  /* adaptives / line-height (desktop) */
   --text-heading-1-lh: 62px;
   --text-heading-2-lh: 44px;
   --text-heading-3-lh: 34px;
@@ -66,12 +64,10 @@
 }
 
 @theme {
-  /* typography */
   --font-heading: var(--next-font-montserrat), sans-serif;
   --font-body: var(--next-font-dm-sans), sans-serif;
   --font-inter: var(--next-font-inter), sans-serif;
 
-  /* colors / main */
   --color-cherry: #682535;
   --color-soft-ivory: #fbf7f5;
   --color-grey: #4a4a4a;
@@ -79,10 +75,8 @@
   --color-black: #000000;
   --color-cherry-light: #6825350d;
 
-  /* base sizes */
   --spacing: 1px;
 
-  /* spacing / gap */
   --spacing-gap-01: 6px;
   --spacing-gap-02: 7px;
   --spacing-gap-03: 8px;
@@ -99,18 +93,17 @@
   --spacing-gap-14: 150px;
   --spacing-gap-15: 200px;
 
-  /* constants / border */
   --border-width-sm: 1px;
   --border-width-md: 6px;
   --border-width-lg: 10px;
 
-  /* constants / radius */
   --radius-esm: 10px;
   --radius-sm: 20px;
   --radius-md: 30px;
   --radius-lg: 100px;
 
-  /* adaptives / font-size + line-height (text-* sets both) */
+  --shadow-card: 10px 10px 30px 0 rgb(0 0 0 / 0.25);
+
   --text-heading-1: var(--text-heading-1);
   --text-heading-1--line-height: var(--text-heading-1-lh);
   --text-heading-2: var(--text-heading-2);
@@ -134,7 +127,6 @@
   --text-button: var(--text-button);
   --text-button--line-height: var(--text-button-lh);
 
-  /* spacing / line-height */
   --leading-heading-1: var(--text-heading-1-lh);
   --leading-heading-2: var(--text-heading-2-lh);
   --leading-heading-3: var(--text-heading-3-lh);
@@ -146,4 +138,24 @@
   --leading-body-3: var(--text-body-3-lh);
   --leading-body-4: var(--text-body-4-lh);
   --leading-button: var(--text-button-lh);
+
+  --breakpoint-2000: 2000px;
+  --breakpoint-1920: 1921px;
+  --breakpoint-1600: 1601px;
+  --breakpoint-1512: 1513px;
+  --breakpoint-1440: 1441px;
+  --breakpoint-1439: 1440px;
+  --breakpoint-1366: 1367px;
+  --breakpoint-1199: 1200px;
+  --breakpoint-1024: 1025px;
+  --breakpoint-1023: 1024px;
+  --breakpoint-992: 993px;
+  --breakpoint-768: 769px;
+  --breakpoint-767: 768px;
+  --breakpoint-640: 641px;
+  --breakpoint-576: 577px;
+  --breakpoint-480: 481px;
+  --breakpoint-479: 480px;
+  --breakpoint-425: 425px;
+  --breakpoint-375: 375px;
 }

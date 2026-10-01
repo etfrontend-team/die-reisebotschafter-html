@@ -1,14 +1,11 @@
-/* button — base */
 .btn {
-  @apply inline-flex max-w-full shrink-0 cursor-pointer items-center justify-center gap-gap-04 rounded-lg border-sm border-solid font-body text-button font-normal transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cherry disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:cursor-not-allowed aria-disabled:opacity-50 md:gap-gap-05 md:font-medium;
+  @apply inline-flex max-w-full shrink-0 cursor-pointer items-center justify-center gap-gap-04 rounded-lg font-body text-button font-normal transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cherry disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:cursor-not-allowed aria-disabled:opacity-50 md:gap-gap-05 md:font-medium;
 }
 
-/* button — label wraps only when wider than its container */
 .btn-label {
   @apply min-w-0 break-words;
 }
 
-/* button — arrow (label + icon circle) */
 .btn-arrow {
   @apply py-7 pr-7 pl-15 md:py-6 md:pr-6 md:pl-20;
 }
@@ -27,17 +24,14 @@
   @apply -rotate-45;
 }
 
-/* button — simple (text only, bg changes on hover) */
 .btn-simple {
   @apply px-20 py-14;
 }
 
-/* button — small */
 .btn-simple.btn-small {
   @apply px-20 py-12 text-body-4;
 }
 
-/* button — colors */
 .btn-white {
   @apply border-white bg-white text-cherry;
 }
@@ -60,4 +54,138 @@
 
 .btn-simple.btn-cherry {
   @apply hover:border-white hover:bg-white hover:text-cherry active:border-white active:bg-white active:text-cherry;
+}
+
+.contact-widget {
+  @apply fixed top-1/2 right-0 z-40 flex -translate-y-1/2 flex-col gap-gap-01 rounded-l-esm bg-soft-ivory p-6 max-md:top-auto max-md:right-20 max-md:bottom-20 max-md:translate-y-0 max-md:rounded-esm max-md:bg-transparent max-md:p-0 max-md:transition-all max-md:duration-300;
+}
+
+.contact-widget--open {
+  @apply max-md:right-14 max-md:bottom-14 max-md:bg-soft-ivory max-md:p-6;
+}
+
+body:has(.expert-bar--in:not(.expert-bar--footer)) .contact-widget {
+  @apply max-md:bottom-80;
+}
+
+body:has(.expert-bar--in:not(.expert-bar--footer)) .contact-widget--open {
+  @apply max-md:bottom-74;
+}
+
+.contact-widget-actions {
+  @apply flex flex-col gap-gap-01 max-md:hidden;
+}
+
+.contact-widget--open .contact-widget-actions {
+  @apply max-md:flex;
+}
+
+.contact-widget-toggle {
+  @apply flex size-44 cursor-pointer items-center justify-center rounded-full bg-cherry p-13 max-md:p-10 md:hidden;
+}
+
+.contact-widget-toggle-icon {
+  @apply relative inline-flex shrink-0 transition-transform duration-300;
+}
+
+.contact-widget--open .contact-widget-toggle-icon {
+  @apply rotate-45;
+}
+
+.contact-widget-btn {
+  @apply relative flex rounded-esm bg-cherry-light p-13 transition-colors duration-300 max-md:p-10;
+}
+
+.contact-widget-icon {
+  @apply relative inline-flex shrink-0;
+}
+
+.contact-widget-icon-default,
+.contact-widget-icon-active {
+  @apply transition-opacity duration-300;
+}
+
+.contact-widget-icon-active {
+  @apply absolute inset-0 opacity-0;
+}
+
+.contact-widget-icon img,
+.contact-widget-toggle-icon img {
+  @apply max-md:size-20;
+}
+
+.contact-widget-btn:hover,
+.contact-widget-btn:focus-visible,
+.contact-widget:not(:has(.contact-widget-btn:hover, .contact-widget-btn:focus-visible))
+  .contact-widget-btn:first-child {
+  @apply bg-cherry;
+}
+
+.contact-widget-btn:hover .contact-widget-icon-default,
+.contact-widget-btn:focus-visible .contact-widget-icon-default,
+.contact-widget:not(:has(.contact-widget-btn:hover, .contact-widget-btn:focus-visible))
+  .contact-widget-btn:first-child
+  .contact-widget-icon-default {
+  @apply opacity-0;
+}
+
+.contact-widget-btn:hover .contact-widget-icon-active,
+.contact-widget-btn:focus-visible .contact-widget-icon-active,
+.contact-widget:not(:has(.contact-widget-btn:hover, .contact-widget-btn:focus-visible))
+  .contact-widget-btn:first-child
+  .contact-widget-icon-active {
+  @apply opacity-100;
+}
+
+.contact-widget-label-wrap {
+  @apply pointer-events-none absolute top-1/2 right-full mr-6 flex -translate-y-1/2 overflow-hidden max-md:hidden;
+}
+
+.contact-widget-label {
+  @apply translate-x-full rounded-l-sm bg-soft-ivory px-10 py-3 font-body text-body-2 font-normal whitespace-nowrap text-grey transition-transform duration-300;
+}
+
+.contact-widget-btn:hover .contact-widget-label,
+.contact-widget-btn:focus-visible .contact-widget-label {
+  @apply translate-x-0;
+}
+
+.expert-bar {
+  @apply pointer-events-none fixed inset-x-40 bottom-20 z-30 mx-auto flex max-w-1360 translate-y-40 items-center justify-between gap-gap-06 rounded-sm bg-soft-ivory py-10 pr-20 pl-13 opacity-0 shadow-card transition duration-500 max-xl:inset-x-20 max-xl:py-8 max-xl:pr-16 max-xl:pl-8 max-lg:right-20 max-lg:left-20 max-lg:mx-0 max-lg:max-w-none max-lg:bg-transparent max-lg:p-0 max-lg:shadow-none;
+}
+
+.expert-bar--in {
+  @apply pointer-events-auto translate-y-0 opacity-100;
+}
+
+.expert-bar--footer {
+  @apply pointer-events-none opacity-0;
+}
+
+.expert-bar-card {
+  @apply flex items-center gap-18 max-xl:gap-14 max-lg:hidden;
+}
+
+.expert-bar-image-wrap {
+  @apply relative shrink-0 overflow-hidden rounded-esm;
+}
+
+.expert-bar-image {
+  @apply object-cover max-xl:size-100;
+}
+
+.expert-bar-text {
+  @apply flex flex-col gap-gap-04 max-xl:gap-gap-01;
+}
+
+.expert-bar-name {
+  @apply max-xl:text-24 max-xl:leading-28;
+}
+
+.expert-bar-tagline {
+  @apply max-xl:text-body-2 max-xl:leading-body-2;
+}
+
+.expert-bar .expert-bar-cta {
+  @apply shrink-0 max-lg:w-full max-lg:shrink max-lg:justify-between;
 }

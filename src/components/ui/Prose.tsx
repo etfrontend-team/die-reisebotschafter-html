@@ -8,7 +8,6 @@ type ProseSize = 1 | 2 | 3 | 4;
 type ProseProps = {
   color?: ProseColor;
   font?: ProseFont;
-  /** Body text style: body-1 … body-4 */
   size?: ProseSize;
   className?: string;
 } & (
@@ -55,7 +54,6 @@ export default function Prose({
     <div className={cls}>
       {Array.isArray(children)
         ? children.map((child, i) =>
-            // Wrap plain text in <p>; leave elements (<p>, <ul>…) as they are.
             typeof child === "string" || typeof child === "number" ? (
               <p key={i}>{child}</p>
             ) : (

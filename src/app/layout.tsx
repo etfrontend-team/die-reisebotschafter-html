@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { DM_Sans, Inter, Montserrat } from "next/font/google";
 import LenisProvider from "@/utils/LenisProvider";
 import Footer from "@/components/shared/Footer";
+import ContactWidget from "@/components/shared/ContactWidget";
+import ExpertBar from "@/components/shared/ExpertBar";
 import Header from "@/components/shared/Header";
 import "@/styles/globals.css";
 
@@ -39,6 +41,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <Header />
           {children}
           <Footer />
+          <ContactWidget />
+          <ExpertBar />
         </LenisProvider>
       </body>
     </html>

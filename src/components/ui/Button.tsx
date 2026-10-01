@@ -10,9 +10,7 @@ type CommonProps = {
   children: React.ReactNode;
   variant?: ButtonVariant;
   size?: ButtonSize;
-  /** Arrow icon button; false renders the simple (text only) style */
   icon?: boolean;
-  /** Defaults to the text content when children is a string */
   ariaLabel?: string;
   disabled?: boolean;
   className?: string;

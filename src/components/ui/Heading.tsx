@@ -5,9 +5,7 @@ type HeadingLevel = 1 | 2 | 3 | 4 | 5 | 6;
 type HeadingColor = "cherry" | "soft-ivory" | "grey" | "white" | "black";
 
 type HeadingProps = {
-  /** Semantic tag: h1–h6 */
   level?: HeadingLevel;
-  /** Visual size; defaults to `level` */
   size?: HeadingLevel;
   color?: HeadingColor;
   uppercase?: boolean;

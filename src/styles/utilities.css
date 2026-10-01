@@ -8,3 +8,6 @@
   border-width: --value(--border-width-*);
   border-width: calc(--value(integer) * 1px);
 }
+@utility grid-cols-header {
+  grid-template-columns: 1fr auto 1fr;
+}
