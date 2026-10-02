@@ -13,7 +13,7 @@ interface ContainerProps {
 
 const variantMap: Record<ContainerVariant, string> = {
   sm: "max-w-1440 md:px-20 px-16",
-  md: "max-w-1440 md:px-40 px-30",
+  md: "max-w-1440 md:px-40 px-gap-07",
   full: "max-w-full md:px-20 px-16",
 };
 

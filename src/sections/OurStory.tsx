@@ -44,14 +44,16 @@ const storyData: {
 function Photo({ photo }: { photo: StoryPhoto }) {
   return (
     <div className={cn("story-photo", `story-photo--${photo.position}`)}>
-      <Image
-        src={photo.src}
-        alt={photo.alt}
-        fill
-        loading="lazy"
-        sizes="(min-width: 1280px) 35vw, 50vw"
-        className="story-photo-image"
-      />
+      <span className="story-photo-inner">
+        <Image
+          src={photo.src}
+          alt={photo.alt}
+          fill
+          loading="lazy"
+          sizes="(min-width: 1280px) 35vw, 50vw"
+          className="story-photo-image"
+        />
+      </span>
     </div>
   );
 }
@@ -60,7 +62,7 @@ export default function OurStory() {
   const [tl, tr, bl, br] = storyData.photos;
 
   return (
-    <section id="our-story" className="story" aria-labelledby="our-story-title">
+    <section id="our-story" className="story general-spacing" aria-labelledby="our-story-title">
       <Container>
         <div className="story-layout">
           <div className="story-row story-row--top">
@@ -78,7 +80,9 @@ export default function OurStory() {
               </Prose>
               <p className="story-signature">{storyData.signature}</p>
             </div>
-            <Button href={storyData.cta.href}>{storyData.cta.label}</Button>
+            <Button href={storyData.cta.href} className="story-cta">
+              {storyData.cta.label}
+            </Button>
           </div>
 
           <div className="story-row story-row--bottom">

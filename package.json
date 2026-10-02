@@ -22,6 +22,7 @@
     "react-dom": "19.2.8",
     "react-draggable": "^4.7.2",
     "react-fast-marquee": "^1.6.5",
+    "swiper": "^14.3.0",
     "tailwind-merge": "^3.7.0"
   },
   "devDependencies": {
